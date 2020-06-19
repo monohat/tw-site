@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - lab2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="text-center cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+        <h3 class="masthead-brand">RPSB</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" asp-controller="Home" asp-action="Index">O</a>
+            <a class="nav-link" asp-controller="Account" asp-action="Login">LOGIN</a>
+            <a class="nav-link" asp-controller="Account" asp-action="Register">REGISTER</a>
+            <a class="nav-link" asp-controller="Home" asp-action="Contact">CONTACT US</a>
+            
+        </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+        <p>Created with <a href="https://docs.microsoft.com/en-us/aspnet/core/">.net core</a>, by SORIN POPOV</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
